@@ -26,10 +26,10 @@ class Database extends Config
      */
     public array $default = [
         'DSN'          => '',
-        'hostname'     => 'localhost',
-        'username'     => 'root',
-        'password'     => '',
-        'database'     => 'databases-merge',
+        'hostname'     => '10.202.145.232',
+        'username'     => 'remoteuser',
+        'password'     => 'password123',
+        'database'     => 'merge2',
         'DBDriver'     => 'MySQLi',
         'DBPrefix'     => '',
         'pConnect'     => false,

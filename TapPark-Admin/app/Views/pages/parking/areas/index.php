@@ -278,7 +278,7 @@
  }
  [data-bs-theme="dark"] #areaSectionsModal #areaSectionsMeta,
  [data-bs-theme="dark"] #areaSectionsModal .text-muted {
-     color: #c7abab !important;
+     color: white !important;
  }
  [data-bs-theme="dark"] #areaSectionsModal .form-label {
      color: #e0c5c5 !important;
@@ -415,13 +415,13 @@
                                             <input type="radio" class="btn-check" name="sectionMode" id="slotBasedMode" value="slot_based" checked>
                                             <label class="btn btn-outline-primary" for="slotBasedMode">
                                                 <i class="fas fa-th me-2"></i>Slot-based
-                                                <small class="d-block text-muted">Individual parking slots (Rows × Columns)</small>
+                                                <small class="d-block">Individual parking slots (Rows × Columns)</small>
                                             </label>
                                             
                                             <input type="radio" class="btn-check" name="sectionMode" id="capacityOnlyMode" value="capacity_only">
                                             <label class="btn btn-outline-primary" for="capacityOnlyMode">
                                                 <i class="fas fa-rectangle-wide me-2"></i>Capacity-only
-                                                <small class="d-block text-muted">Single block with capacity</small>
+                                                <small class="d-block">Single block with capacity</small>
                                             </label>
                                         </div>
                                     </div>
@@ -863,13 +863,13 @@
                                     <input type="radio" class="btn-check" name="editSectionMode" id="editSlotBasedMode" value="slot_based" checked>
                                     <label class="btn btn-outline-primary" for="editSlotBasedMode">
                                         <i class="fas fa-th me-2"></i>Slot-based
-                                        <small class="d-block text-muted">Individual parking slots (Rows × Columns)</small>
+                                        <small class="d-block">Individual parking slots (Rows × Columns)</small>
                                     </label>
                                     
                                     <input type="radio" class="btn-check" name="editSectionMode" id="editCapacityOnlyMode" value="capacity_only">
                                     <label class="btn btn-outline-primary" for="editCapacityOnlyMode">
                                         <i class="fas fa-rectangle-wide me-2"></i>Capacity-only
-                                        <small class="d-block text-muted">Single block with capacity</small>
+                                        <small class="d-block">Single block with capacity</small>
                                     </label>
                                 </div>
                             </div>

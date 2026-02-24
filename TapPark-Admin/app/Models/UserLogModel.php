@@ -51,7 +51,7 @@ class UserLogModel extends Model
         $data = [
             'user_id' => $userId,
             'target_id' => $targetId,
-            'action_type' => $actionType,
+            'action_type' => $actionType ?? 'unknown',
             'change_field' => $changeField,
             'description' => $description,
             'timestamp' => date('Y-m-d H:i:s')

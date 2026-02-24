@@ -118,10 +118,10 @@
     color: #8b1f2b !important;
 }
 
-.dashboard-chart-header .text-muted {
+/* .dashboard-chart-header .text-muted {
     color: #7c5d63 !important;
 }
-
+ */
 [data-bs-theme="dark"] .dashboard-chart-card {
     border-color: rgba(201, 128, 136, 0.28);
     background: linear-gradient(180deg, #2e2227 0%, #291e23 100%);
@@ -141,10 +141,10 @@
 [data-bs-theme="dark"] .dashboard-chart-header i {
     color: #f2b6bf !important;
 }
-
+/* 
 [data-bs-theme="dark"] .dashboard-chart-header .text-muted {
     color: #d9b7be !important;
-}
+} */
 
 [data-bs-theme="dark"] .dashboard-chart-card .card-body {
     background: transparent;

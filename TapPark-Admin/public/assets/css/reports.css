@@ -760,9 +760,9 @@ ul.chartjs-legend,
     color: #44242b;
 }
 
-#reportsContent .card.h-100.shadow-sm .card-header .text-muted {
+/* #reportsContent .card.h-100.shadow-sm .card-header .text-muted {
     color: #7c5d63 !important;
-}
+} */
 
 [data-bs-theme="dark"] #reportsContent .card.h-100.shadow-sm {
     background: linear-gradient(180deg, #2e2227 0%, #291e23 100%) !important;
@@ -780,9 +780,9 @@ ul.chartjs-legend,
     color: #f3dde1;
 }
 
-[data-bs-theme="dark"] #reportsContent .card.h-100.shadow-sm .card-header .text-muted {
+/* [data-bs-theme="dark"] #reportsContent .card.h-100.shadow-sm .card-header .text-muted {
     color: #d9b7be !important;
-}
+} */
 
 [data-bs-theme="dark"] #reportsContent .card.h-100.shadow-sm .card-header i {
     color: #f2b6bf !important;

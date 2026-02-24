@@ -211,7 +211,7 @@
     color: #8b1f2b !important;
 }
 
-#areasGrid .area-card .area-header .text-muted {
+/* #areasGrid .area-card .area-header .text-muted {
     color: #7c5d63 !important;
     min-height: 2.8em;
     line-height: 1.4;
@@ -219,7 +219,7 @@
     -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
     overflow: hidden;
-}
+} */
 
 #areasGrid .area-card .area-header {
     min-height: 104px;
@@ -301,9 +301,6 @@
     color: #f2b6bf !important;
 }
 
-[data-bs-theme="dark"] #areasGrid .area-card .area-header .text-muted {
-    color: #d9b7be !important;
-}
 
 /* Sections List */
 .sections-list {
@@ -912,13 +909,13 @@
 #editSectionModal .confirmation-mode .form-label {
     color: #6c757d !important;
 }
-
+/*
 #wizardModal .confirmation-mode .text-muted,
 #editAreaModal .confirmation-mode .text-muted,
 #addSectionModal .confirmation-mode .text-muted,
 #editSectionModal .confirmation-mode .text-muted {
     color: #adb5bd !important;
-}
+}*/
 
 #wizardModal .confirmation-mode .invalid-feedback,
 #editAreaModal .confirmation-mode .invalid-feedback,
@@ -985,12 +982,16 @@
     color: #6c757d !important;
 }
 
+/*
+
 [data-bs-theme="dark"] #wizardModal .confirmation-mode .text-muted,
 [data-bs-theme="dark"] #editAreaModal .confirmation-mode .text-muted,
 [data-bs-theme="dark"] #addSectionModal .confirmation-mode .text-muted,
 [data-bs-theme="dark"] #editSectionModal .confirmation-mode .text-muted {
     color: #6c757d !important;
 }
+
+*/
 
 [data-bs-theme="dark"] #wizardModal .confirmation-mode .btn-check:disabled+.btn,
 [data-bs-theme="dark"] #editAreaModal .confirmation-mode .btn-check:disabled+.btn,
