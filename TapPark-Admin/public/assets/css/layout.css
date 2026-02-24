@@ -4,6 +4,26 @@ body {
     overflow-x: hidden;
     max-width: 100vw;
     width: 100%;
+    /* iOS Safe Area Support */
+    padding-top: env(safe-area-inset-top);
+    padding-bottom: env(safe-area-inset-bottom);
+    padding-left: env(safe-area-inset-left);
+    padding-right: env(safe-area-inset-right);
+}
+
+/* Prevent auto-zoom on iOS inputs */
+@media screen and (max-width: 768px) {
+    input[type="text"],
+    input[type="search"],
+    input[type="email"],
+    input[type="password"],
+    input[type="number"],
+    input[type="tel"],
+    input[type="url"],
+    select,
+    textarea {
+        font-size: 16px !important;
+    }
 }
 
 .element-btn {
@@ -185,6 +205,8 @@ h6,
     display: flex;
     flex-direction: column;
     touch-action: pan-y;
+    padding-top: env(safe-area-inset-top);
+    padding-bottom: env(safe-area-inset-bottom);
 }
 
 /* Dark mode sidebar adjustments */
@@ -647,6 +669,8 @@ h6,
     width: calc(100vw - var(--sidebar-width));
     background: var(--card-bg);
     padding: 6px 15px;
+    padding-top: max(6px, env(safe-area-inset-top));
+    padding-right: max(15px, env(safe-area-inset-right));
     /* Further reduced from 10px 20px */
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     display: flex;
@@ -674,7 +698,12 @@ h6,
     font-size: 24px;
     color: var(--text-color);
     cursor: pointer;
-    padding: 5px 10px;
+    padding: 10px;
+    min-width: 44px;
+    min-height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     transition: all 0.3s ease;
 }
 
@@ -716,7 +745,12 @@ h6,
     border: none;
     font-size: 20px;
     cursor: pointer;
-    padding: 5px 10px;
+    padding: 10px;
+    min-width: 44px;
+    min-height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     color: var(--text-muted);
     transition: color 0.3s ease;
 }

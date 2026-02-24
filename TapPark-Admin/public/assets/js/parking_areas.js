@@ -23,6 +23,8 @@ if (typeof window.initPageScripts === 'function') {
             let allAreas = [];
             let wizardLocationBindingsInitialized = false;
             let wizardLocationAbortController = null;
+            let wizardIsDirty = false; // Track unsaved changes in wizard
+            let wizardForceClose = false; // Flag to allow closing wizard when confirmed
 
             // Initialize
             loadVehicleTypes();
@@ -954,10 +956,18 @@ if (typeof window.initPageScripts === 'function') {
             function openWizard() {
                 wizardCurrentStep = 1;
                 wizardSections = [];
+                wizardForceClose = false; // Reset force close flag
+                
                 resetWizardForms();
                 updateWizardStep();
                 populateWizardVehicleTypes();
                 initializeWizardLocationFeatures();
+                
+                // Reset dirty flag AFTER form reset and initialization
+                // (because resetWizardForms might trigger change events)
+                setTimeout(() => {
+                    wizardIsDirty = false;
+                }, 100);
 
                 // Reset footer state
                 $('#wizardConfirmFooter').hide();
@@ -965,6 +975,43 @@ if (typeof window.initPageScripts === 'function') {
 
                 wizardModal.show();
             }
+
+            // Track changes in wizard inputs
+            $('#wizardModal').on('input change', 'input, select, textarea', function() {
+                // Ignore hidden inputs that might be updated programmatically
+                if ($(this).attr('type') !== 'hidden') {
+                    wizardIsDirty = true;
+                }
+            });
+
+            // Intercept wizard close to check for unsaved changes
+            $('#wizardModal').on('hide.bs.modal', function(e) {
+                // If force close is enabled, allow closing
+                if (wizardForceClose) {
+                    return;
+                }
+
+                // If dirty or has sections added, prevent closing and show confirmation
+                if (wizardIsDirty || wizardSections.length > 0) {
+                    e.preventDefault();
+                    const confirmModal = new bootstrap.Modal(document.getElementById('wizardExitConfirmModal'));
+                    confirmModal.show();
+                }
+            });
+
+            // Handle Exit Confirmation "Yes" button
+            $('#confirmExitWizardBtn').on('click', function() {
+                wizardForceClose = true; // Allow closing
+                wizardIsDirty = false; // Clear dirty flag
+                
+                // Hide confirmation modal
+                const confirmModalEl = document.getElementById('wizardExitConfirmModal');
+                const confirmModal = bootstrap.Modal.getInstance(confirmModalEl);
+                if (confirmModal) confirmModal.hide();
+                
+                // Hide wizard modal
+                wizardModal.hide();
+            });
 
             function resetWizardForms() {
                 $('#wizardStep1Form')[0].reset();
@@ -1450,7 +1497,11 @@ if (typeof window.initPageScripts === 'function') {
                     success: function (response) {
                         if (response.success) {
                             const totalSpots = wizardSections.reduce((sum, s) => sum + (s.capacity || (s.rows * s.columns)), 0);
+                            
+                            wizardIsDirty = false; // Clear dirty flag to allow closing
+                            wizardForceClose = true; // Ensure closing
                             wizardModal.hide();
+                            
                             showToast(`Success! Created parking area "${data.area.parking_area_name}" with ${wizardSections.length} sections and ${totalSpots} total spots!`, 'success');
                             if (response.stats) {
                                 updateStats(response.stats);

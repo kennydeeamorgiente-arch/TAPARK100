@@ -68,6 +68,10 @@ $routes->post('subscriptions/update/(:num)', 'Subscriptions::update/$1');
 $routes->post('subscriptions/delete/(:num)', 'Subscriptions::delete/$1');
 $routes->get('subscriptions/export', 'Subscriptions::export');
 
+// Vehicle Types routes
+$routes->get('admin/vehicle-types', 'VehicleTypes::list');
+$routes->put('admin/vehicle-types/(:num)', 'VehicleTypes::update/$1');
+
 // Attendants routes
 $routes->get('attendants', 'Attendants::index');
 $routes->get('attendants/list', 'Attendants::list');

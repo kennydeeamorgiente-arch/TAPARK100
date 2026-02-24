@@ -219,6 +219,25 @@
 <style>
 #crudFormModal .modal-dialog {
     max-width: 550px;
+    margin: 1.75rem auto;
+}
+
+@media (max-width: 576px) {
+    #crudFormModal .modal-dialog {
+        max-width: 100%;
+        margin: 0;
+        height: 100%;
+    }
+    
+    #crudFormModal .modal-content {
+        height: 100%;
+        border-radius: 0;
+        border: none;
+    }
+    
+    #crudFormModal .modal-body {
+        max-height: calc(100vh - 130px) !important;
+    }
 }
 
 #crudFormModal .modal-content {

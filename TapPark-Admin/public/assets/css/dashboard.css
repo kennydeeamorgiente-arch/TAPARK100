@@ -532,7 +532,49 @@
     .guest-panel-list {
         max-height: 180px;
     }
+
+    /* Mobile Typography */
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    h3 {
+        font-size: 1.25rem;
+    }
+
+    h5 {
+        font-size: 1.1rem;
+    }
+
+    h6 {
+        font-size: 1rem;
+    }
+    
+    /* Better stat card sizing on small screens */
+    .stats-card-modern h4 {
+        font-size: 1.35rem !important;
+    }
+    
+    .stats-card-modern .stats-icon i {
+        font-size: 1.75rem !important;
+    }
 }
+
+@media (max-width: 400px) {
+    .stats-card-modern .card-body {
+        padding: 0.85rem;
+    }
+    
+    .stats-card-modern h4 {
+        font-size: 1.2rem !important;
+    }
+    
+    .stats-card-modern .stats-icon i {
+        font-size: 1.5rem !important;
+    }
+}
+
+/* Global stat card palette: lighter transparent maroon across pages and modals */
 
 /* Dark Theme - All stat cards use consistent maroon theme */
 [data-bs-theme="dark"] .stats-card-maroon,

@@ -155,7 +155,7 @@
                                 <option value="100" <?= $globalPerPage == 100 ? 'selected' : '' ?>>100</option>
                             </select>
                             <button class="btn btn-success btn-sm" id="exportUsersBtn">
-                                <i class="fas fa-file-excel me-2"></i>Export Subscribers to CSV
+                                <i class="fas fa-file-excel me-2"></i>Export to CSV
                             </button>
                         </div>
                     </div>
@@ -217,7 +217,7 @@
                                 <option value="100" <?= $globalPerPage == 100 ? 'selected' : '' ?>>100</option>
                             </select>
                             <button class="btn btn-outline-success btn-sm" id="exportAdminsBtn">
-                                <i class="fas fa-file-csv me-1"></i>Export Admins to CSV
+                                <i class="fas fa-file-csv me-1"></i>Export to CSV
                             </button>
                         </div>
                     </div>
@@ -278,7 +278,7 @@
                                 <option value="100" <?= $globalPerPage == 100 ? 'selected' : '' ?>>100</option>
                             </select>
                             <button class="btn btn-outline-success btn-sm" id="exportAttendantsBtn">
-                                <i class="fas fa-file-csv me-1"></i>Export Attendants to CSV
+                                <i class="fas fa-file-csv me-1"></i>Export to CSV
                             </button>
                         </div>
                     </div>
@@ -340,7 +340,7 @@
                                 <option value="100" <?= $globalPerPage == 100 ? 'selected' : '' ?>>100</option>
                             </select>
                             <button class="btn btn-success btn-sm" id="exportGuestsBtn">
-                                <i class="fas fa-file-excel me-2"></i>Export Guests to CSV
+                                <i class="fas fa-file-excel me-2"></i>Export to CSV
                             </button>
                         </div>
                     </div>

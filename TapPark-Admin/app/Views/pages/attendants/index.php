@@ -117,7 +117,7 @@
                         <option value="100" <?= $globalPerPage == 100 ? 'selected' : '' ?>>100</option>
                     </select>
                     <button class="btn btn-success btn-sm" id="exportAttendantsBtn">
-                        <i class="fas fa-file-excel me-2"></i>Export Staff to CSV
+                        <i class="fas fa-file-excel me-2"></i>Export to CSV
                     </button>
                 </div>
             </div>

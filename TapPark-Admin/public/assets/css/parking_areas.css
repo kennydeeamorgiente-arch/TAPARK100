@@ -1003,6 +1003,60 @@
 }
 
 
+/* Dark Mode - Wizard Section List Items */
+[data-bs-theme="dark"] .section-list-item {
+    background: #2d3436 !important;
+    border-color: #495057 !important;
+    color: #e8d4d4 !important;
+}
+
+[data-bs-theme="dark"] .section-list-item:hover {
+    background: #343a40 !important;
+}
+
+[data-bs-theme="dark"] .section-list-item strong {
+    color: #fff !important;
+}
+
+/* Dark Mode - Modal Confirmation Footer */
+[data-bs-theme="dark"] .modal-footer div[style*="text-align: center"] {
+    background: #211818 !important;
+    border-top-color: rgba(219, 176, 176, 0.14) !important;
+    color: #e8d4d4 !important;
+}
+
+/* Dark Mode - Wizard "Sections to Create" Card */
+[data-bs-theme="dark"] #wizardModal .card {
+    background: #2a1f1f !important;
+    border-color: rgba(219, 176, 176, 0.18) !important;
+}
+
+[data-bs-theme="dark"] #wizardModal .card-header.bg-light {
+    background: rgba(255, 255, 255, 0.05) !important;
+    color: #e8d4d4 !important;
+    border-bottom-color: rgba(219, 176, 176, 0.18) !important;
+}
+
+[data-bs-theme="dark"] #wizardModal .card-body {
+    background: transparent !important;
+}
+
+/* Dark Mode - Exit Confirmation Modal */
+[data-bs-theme="dark"] #wizardExitConfirmModal .modal-content {
+    background: #241b1b !important;
+    border: 1px solid rgba(219, 176, 176, 0.18) !important;
+}
+
+[data-bs-theme="dark"] #wizardExitConfirmModal .modal-body {
+    background: #1a1414 !important;
+    color: #ead6d6 !important;
+}
+
+[data-bs-theme="dark"] #wizardExitConfirmModal .modal-footer {
+    background: #211818 !important;
+    border-top-color: rgba(219, 176, 176, 0.14) !important;
+}
+
 /* Responsive */
 @media (max-width: 768px) {
     .area-stats-grid {

@@ -756,8 +756,6 @@
   border-color: #800000;
   background-color: transparent;
   transition: all 0.3s ease;
-  border-radius: 25px;
-  padding: 8px 20px;
   font-weight: 500;
 }
 
